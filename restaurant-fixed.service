@@ -1,0 +1,25 @@
+[Unit]
+Description=Restaurant Website Backend
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/efwegewrgwekfqjn22/Backend
+ExecStart=/usr/bin/dotnet /home/efwegewrgwekfqjn22/Backend/bin/Release/net8.0/Backend.dll
+Restart=always
+RestartSec=10
+KillSignal=SIGINT
+TimeoutStopSec=90
+SyslogIdentifier=restaurant-backend
+User=root
+Environment=ASPNETCORE_ENVIRONMENT=Production
+Environment=ASPNETCORE_URLS=http://localhost:5000
+
+# Логирование
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
+
+

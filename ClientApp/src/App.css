@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--primary-color, #8B7355);
+  overscroll-behavior-y: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+/* Общие стили */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Основная цветовая схема (Теплая земляная) */
+  --primary-color: #8B7355;
+  --primary-light: #A89176;
+  --primary-dark: #6B5942;
+  --secondary-color: #A8D8EA;
+  --secondary-light: #C5E7F5;
+  --secondary-dark: #7BB8D4;
+  --accent-color: #D4B896;
+  --background-color: #FDF6E3;
+  --text-color: #333333;
+  --text-light: #666666;
+  --white: #FFFFFF;
+  --error-color: #E74C3C;
+  --success-color: #27AE60;
+  --warning-color: #F39C12;
+}
+
+/* Альтернативная цветовая схема (Элегантная синяя) */
+.theme-elegant {
+  --primary-color: #2C3E50;
+  --primary-light: #34495E;
+  --primary-dark: #1C2833;
+  --secondary-color: #3498DB;
+  --secondary-light: #5DADE2;
+  --secondary-dark: #2980B9;
+  --accent-color: #E74C3C;
+  --background-color: #ECF0F1;
+  --text-color: #2C3E50;
+  --text-light: #566573;
+}
+
+html {
+  background: var(--primary-color, #8B7355);
+  overscroll-behavior-y: none;
+  -webkit-overflow-scrolling: touch;
+  min-height: 100%;
+  transition: background-color 0.3s ease;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: var(--background-color);
+  transition: all 0.3s ease;
+  overscroll-behavior-y: none;
+  -webkit-overflow-scrolling: touch;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  background: var(--background-color);
+  transition: background-color 0.3s ease;
+}
+
+/* Для мобильных устройств - предотвращение белого фона при overscroll */
+@media (max-width: 768px) {
+  html {
+    background: var(--primary-color, #8B7355) !important;
+  }
+  
+  body {
+    background: var(--background-color);
+  }
+  
+  /* Дополнительная защита от белого фона */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.App {
+  min-height: 100vh;
+}
+
+/* Общие стили */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Кнопка смены темы */
+.theme-switcher {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 1000;
+  background: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.theme-switcher:hover {
+  background: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease;
+}
